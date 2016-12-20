@@ -1,0 +1,32 @@
+svg {
+  fill: #f46864;
+  width:50%;
+  height: auto;
+}
+.svg-right{
+  padding-left:70px;
+}
+@media (max-width: 600px) {
+  svg{
+    padding-top: 20px;
+  }
+}
+.hero{
+  margin:0;
+  padding:0;
+  background-color: #fff;
+}
+.about-section{
+  background-color: #ffffff;
+  border-bottom: 1px lightgray solid;
+  padding: 150px 0px 100px 0px;
+}
+.about-section h1{
+  font-size: 2.5em;
+}
+.about-section p{
+  font-size: 1.5em;
+}
+.center-block{
+  margin:0 auto;
+}

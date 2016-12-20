@@ -1,0 +1,31 @@
+.cta {
+  background-color: #f46864;
+}
+
+#mc_embed_signup {
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+#mc_embed_signup form {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.mc-field-group {
+  display: inline-block;
+}
+
+/* positions input field horizontally */
+#mc_embed_signup input.email { /*font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;*/
+  display: inline-block;
+  width:300px;
+}
+
+
+#mc_embed_signup .clear {
+  display: inline-block;
+}
