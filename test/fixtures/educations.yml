@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  education_level: MyString
+  institution: MyString
+  program: MyString
+  status: MyString
+  start_date: 2016-12-20
+  end_date: 2016-12-20
+
+two:
+  education_level: MyString
+  institution: MyString
+  program: MyString
+  status: MyString
+  start_date: 2016-12-20
+  end_date: 2016-12-20
