@@ -55,4 +55,5 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 
 
 gem 'devise'
+gem 'annotate'
 gem 'thor', '0.19.1'

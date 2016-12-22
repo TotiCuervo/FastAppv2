@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222025120) do
+ActiveRecord::Schema.define(version: 20161222033044) do
+
+  create_table "achievements", force: :cascade do |t|
+    t.string   "title"
+    t.date     "date"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
 
   create_table "addresses", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -21,6 +31,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.integer  "zip"
     t.boolean  "primary"
     t.string   "country"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -45,6 +57,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.integer  "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_availabilities_on_user_id"
   end
 
   create_table "educations", force: :cascade do |t|
@@ -56,6 +70,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.date     "end_date"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_educations_on_user_id"
   end
 
   create_table "employers", force: :cascade do |t|
@@ -80,6 +96,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.string   "type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_phone_numbers_on_user_id"
   end
 
   create_table "references", force: :cascade do |t|
@@ -89,6 +107,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.string   "affiliation"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_references_on_user_id"
   end
 
   create_table "resumes", force: :cascade do |t|
@@ -96,6 +116,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_resumes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -132,6 +154,8 @@ ActiveRecord::Schema.define(version: 20161222025120) do
     t.string   "reasons_for_leaving"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_work_experiences_on_user_id"
   end
 
 end
