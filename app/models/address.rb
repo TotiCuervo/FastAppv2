@@ -16,4 +16,15 @@
 
 class Address < ApplicationRecord
   belongs_to :user
+
+  validates :StreetName, :city, :state, :zip, :primary, :country, presence: true
+
+  validates :StreetName, length: { minimum: 2 }
+  validates :city, length: { minimum: 2 }
+  validates :state, length: { minimum: 2 }
+  validates :country, length: { minimum: 2 }
+
+  validates :zip, numericality: true
+  validates :zip, numericality: { greater_than: 0 }
+
 end
